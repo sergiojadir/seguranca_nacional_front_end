@@ -1,10 +1,11 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.scss';
-import Tickets from './components/Tickets';
 import Header from './components/Header';
+
+import Routes from './routes'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCheckCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
@@ -15,7 +16,7 @@ function App() {
     <div className="App">
       <Header/>
       <Container>
-        <Tickets/>
+        <Routes/>
       </Container>
     </div>
   );
