@@ -12,7 +12,7 @@ function Create(props) {
 	const [show, setShow] = useState('');
 
 	const handleSubmit = (async () => {
-		let response = await fetch('http://localhost:3001/passengers',
+		let response = await fetch('https://segurancanacional.herokuapp.com/passengers',
 			{
 				method: 'POST',
          headers: {

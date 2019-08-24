@@ -6,6 +6,7 @@ import Create from './Create'
 // import Button from 'react-bootstrap/Button'
    
 class Passenger extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +16,7 @@ class Passenger extends Component {
   }
 
   async loadPassengers() {
-    let response = await fetch('http://localhost:3001/passengers');
+    let response = await fetch('https://segurancanacional.herokuapp.com/passengers');
     const passengers = await response.json();
     this.setState({passengers: passengers});
   }
@@ -25,6 +26,7 @@ class Passenger extends Component {
   }
 
   render() {
+    console.log(process.env.API_URL)
     return (
       <Row>
         <Col xs={{ span: 8, offset: 2 }} className="tasks_list">

@@ -15,7 +15,7 @@ class Flights extends Component {
   }
 
   async loadFlights() {
-    let response = await fetch('http://localhost:3001/flights');
+    let response = await fetch('https://segurancanacional.herokuapp.com/flights');
     const filghts = await response.json();
     this.setState({filghts: filghts});
   }

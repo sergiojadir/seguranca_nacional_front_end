@@ -13,7 +13,7 @@ class Tickets extends Component {
   }
 
   async loadTickets() {
-    let response = await fetch('http://localhost:3001/tickets');
+    let response = await fetch('https://segurancanacional.herokuapp.com/tickets');
     const tickets = await response.json();
     console.log(tickets);
     this.setState({tickets: tickets});
